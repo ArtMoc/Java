@@ -9,5 +9,4 @@ public class Main {
         ArrayUtils.reverseArray(a);
         System.out.println(Arrays.toString(a));
     }
-
 }
