@@ -1,6 +1,27 @@
 public class Main {
-    public static void main(String[] args) {
+    public  StringBuilder stringOfDigits(int stringLength) {
+        StringBuilder str = new StringBuilder("");
+        for (int i = 0; i <= stringLength; i++) {
+            str.append(i);
+        }
+        return str;
+    }
+    public double averageWordLength(String str) {
+        String REGEX_WORDS = "[\\d\\p{Punct}\\s]+";
+        String[] str1 = str.split(REGEX_WORDS);
+        String without_a_space = str.replaceAll("\\s+", "");
+        double average = without_a_space.length() / str1.length;
 
-        System.out.println("Hello world!");
+        return average;
+    }
+    public int numberOfEvenWords(String str) {
+        String[] str1 = str.split("[:\\s]+");
+        int evenWords = 0;
+        for (int i = 0; i < str1.length; i++) {
+            if (str1[i].length() % 2 == 0) {
+                evenWords++;
+            }
+        }
+        return evenWords;
     }
 }
